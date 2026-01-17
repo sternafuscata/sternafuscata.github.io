@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #1a365d;
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .intro {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 48px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #334155;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tools {
+            display: grid;
+            gap: 20px;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: block;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .tool-card h3 {
+            color: #1a365d;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .tool-card p {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .arrow {
+            color: #3b82f6;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <p class="intro">A collection of energy and power tools.</p>
+
+        <h2>Tools</h2>
+        <div class="tools">
+            <a href="power-calculator.html" class="tool-card">
+                <h3>Power Capacity Calculator</h3>
+                <p>Estimate how many homes can be powered by a given generation capacity. Adjustable capacity factor and average home power demand for use with any power source or country.</p>
+                <div class="arrow">Open calculator &rarr;</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

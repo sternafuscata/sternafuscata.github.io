@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Capacity Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .calculator {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1a365d;
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+        }
+
+        .input-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            color: #334155;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .label-hint {
+            font-weight: 400;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        .input-wrapper:focus-within {
+            border-color: #3b82f6;
+        }
+
+        input[type="number"] {
+            flex: 1;
+            border: none;
+            padding: 14px 16px;
+            font-size: 1.1rem;
+            outline: none;
+        }
+
+        .unit {
+            background: #f1f5f9;
+            padding: 14px 16px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .slider-container {
+            margin-top: 8px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #e2e8f0;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #3b82f6;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
+
+        .slider-value {
+            text-align: center;
+            color: #3b82f6;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
+
+        .result-box {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .result-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .result-number {
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .result-unit {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        .calculation-details {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 24px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .calculation-details h3 {
+            color: #334155;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .calc-row:last-child {
+            border-bottom: none;
+        }
+
+        .source {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        .source a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .source a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Power Capacity Calculator</h1>
+        <p class="subtitle">Estimate homes powered by any generation source</p>
+
+        <div class="input-group">
+            <label for="capacity">Nameplate Capacity</label>
+            <div class="input-wrapper">
+                <input type="number" id="capacity" value="1000" min="1" step="1">
+                <span class="unit">MW</span>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="capacityFactor">Capacity Factor</label>
+            <div class="slider-container">
+                <input type="range" id="capacityFactor" min="5" max="95" value="40" step="1">
+                <div class="slider-labels">
+                    <span>5%</span>
+                    <span>95%</span>
+                </div>
+                <div class="slider-value"><span id="capacityFactorDisplay">40</span>%</div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="homePower">Avg. Home Power Demand <span class="label-hint">(US default: 1.2 kW)</span></label>
+            <div class="slider-container">
+                <input type="range" id="homePower" min="0.3" max="2.5" value="1.2" step="0.1">
+                <div class="slider-labels">
+                    <span>0.3 kW</span>
+                    <span>2.5 kW</span>
+                </div>
+                <div class="slider-value"><span id="homePowerDisplay">1.2</span> kW</div>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="result-label">Estimated Homes Powered</div>
+            <div class="result-number" id="homesResult">333,333</div>
+            <div class="result-unit">average US households</div>
+        </div>
+
+        <div class="calculation-details">
+            <h3>Calculation Breakdown</h3>
+            <div class="calc-row">
+                <span>Nameplate capacity:</span>
+                <span id="detailCapacity">1,000 MW</span>
+            </div>
+            <div class="calc-row">
+                <span>Capacity factor:</span>
+                <span id="detailFactor">40%</span>
+            </div>
+            <div class="calc-row">
+                <span>Actual avg. output:</span>
+                <span id="detailOutput">400 MW</span>
+            </div>
+            <div class="calc-row">
+                <span>Avg. home power demand:</span>
+                <span id="detailHomePower">1.20 kW</span>
+            </div>
+        </div>
+
+        <div class="source">
+            US default (1.2 kW) based on <a href="https://www.eia.gov/energyexplained/use-of-energy/electricity-use-in-homes.php" target="_blank">EIA data</a> (~10,500 kWh/year)<br>
+            Adjust home power for other countries
+        </div>
+    </div>
+
+    <script>
+        const capacityInput = document.getElementById('capacity');
+        const capacityFactorSlider = document.getElementById('capacityFactor');
+        const capacityFactorDisplay = document.getElementById('capacityFactorDisplay');
+        const homePowerSlider = document.getElementById('homePower');
+        const homePowerDisplay = document.getElementById('homePowerDisplay');
+        const homesResult = document.getElementById('homesResult');
+        const detailCapacity = document.getElementById('detailCapacity');
+        const detailFactor = document.getElementById('detailFactor');
+        const detailOutput = document.getElementById('detailOutput');
+        const detailHomePower = document.getElementById('detailHomePower');
+
+        function formatNumber(num) {
+            return Math.round(num).toLocaleString('en-US');
+        }
+
+        function calculate() {
+            const capacityMW = parseFloat(capacityInput.value) || 0;
+            const capacityFactor = parseFloat(capacityFactorSlider.value) / 100;
+            const homePowerKW = parseFloat(homePowerSlider.value) || 1.2;
+
+            // Calculate actual average power output
+            const actualOutputMW = capacityMW * capacityFactor;
+            const actualOutputKW = actualOutputMW * 1000;
+
+            // Calculate homes powered
+            const homesPowered = actualOutputKW / homePowerKW;
+
+            // Update displays
+            capacityFactorDisplay.textContent = capacityFactorSlider.value;
+            homePowerDisplay.textContent = homePowerKW.toFixed(1);
+            homesResult.textContent = formatNumber(homesPowered);
+
+            // Update calculation details
+            detailCapacity.textContent = formatNumber(capacityMW) + ' MW';
+            detailFactor.textContent = capacityFactorSlider.value + '%';
+            detailOutput.textContent = formatNumber(actualOutputMW) + ' MW';
+            detailHomePower.textContent = homePowerKW.toFixed(2) + ' kW';
+        }
+
+        // Event listeners
+        capacityInput.addEventListener('input', calculate);
+        capacityFactorSlider.addEventListener('input', calculate);
+        homePowerSlider.addEventListener('input', calculate);
+
+        // Initial calculation
+        calculate();
+    </script>
+</body>
+</html>
