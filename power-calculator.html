@@ -230,7 +230,7 @@
         <div class="input-group">
             <label for="homePower">Avg. Home Power Demand <span class="label-hint">(US default: 1.2 kW)</span></label>
             <div class="slider-container">
-                <input type="range" id="homePower" min="0.3" max="2.5" value="1.2" step="0.1">
+                <input type="range" id="homePower" min="0.3" max="2.5" value="1.2" step="0.01">
                 <div class="slider-labels">
                     <span>0.3 kW</span>
                     <span>2.5 kW</span>
@@ -301,7 +301,7 @@
 
             // Update displays
             capacityFactorDisplay.textContent = capacityFactorSlider.value;
-            homePowerDisplay.textContent = homePowerKW.toFixed(1);
+            homePowerDisplay.textContent = homePowerKW.toFixed(2);
             homesResult.textContent = formatNumber(homesPowered);
 
             // Update calculation details
