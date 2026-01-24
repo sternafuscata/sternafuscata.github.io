@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>William Yancey Brown</title>
     <style>
         * {
             box-sizing: border-box;
@@ -16,6 +16,7 @@
             background: #f8fafc;
             min-height: 100vh;
             padding: 40px 20px;
+            line-height: 1.6;
         }
 
         .container {
@@ -26,14 +27,43 @@
         h1 {
             color: #1a365d;
             font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .bio {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .bio p {
+            color: #334155;
+            font-size: 1.05rem;
             margin-bottom: 16px;
         }
 
-        .intro {
-            color: #64748b;
-            font-size: 1.1rem;
-            margin-bottom: 48px;
-            line-height: 1.6;
+        .bio p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .bio-link:hover {
+            text-decoration: underline;
         }
 
         h2 {
@@ -44,12 +74,12 @@
             letter-spacing: 1px;
         }
 
-        .tools {
+        .cards {
             display: grid;
             gap: 20px;
         }
 
-        .tool-card {
+        .card {
             background: white;
             border-radius: 12px;
             padding: 24px;
@@ -60,18 +90,18 @@
             display: block;
         }
 
-        .tool-card:hover {
+        .card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
-        .tool-card h3 {
+        .card h3 {
             color: #1a365d;
             font-size: 1.25rem;
             margin-bottom: 8px;
         }
 
-        .tool-card p {
+        .card p {
             color: #64748b;
             line-height: 1.5;
         }
@@ -81,26 +111,49 @@
             margin-top: 12px;
             font-weight: 500;
         }
+
+        section {
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome</h1>
-        <p class="intro">A collection of energy and climate tools.</p>
+        <h1>William Yancey Brown</h1>
+        <p class="subtitle">Biographical Information and Tools</p>
 
-        <h2>Tools</h2>
-        <div class="tools">
-            <a href="power-calculator.html" class="tool-card">
-                <h3>Power Capacity Calculator</h3>
-                <p>Estimate how many homes can be powered by a given generation capacity. Adjustable capacity factor and average home power demand for use with any power source or country.</p>
-                <div class="arrow">Open calculator &rarr;</div>
-            </a>
-            <a href="co2-temperature-calculator.html" class="tool-card">
-                <h3>CO2 Temperature Calculator</h3>
-                <p>Estimate average temperature increase from atmospheric CO2 increase. Based on IPCC AR6 and Earth System Science Data.</p>
-                <div class="arrow">Open calculator &rarr;</div>
-            </a>
+        <div class="bio">
+            <p>Bill Brown is a nonresident Senior Fellow at the Atlantic Council. He retired from the federal government in June 2024 as the Chief Environmental Officer of the Bureau of Ocean Energy Management (BOEM), a position he had served in since November 2013. His previous positions include Science Advisor to Interior Secretary Bruce Babbitt and President & CEO of the Bishop Museum in Hawaii, the Academy of Natural Sciences in Philadelphia, and the Woods Hole Research Center in Massachusetts. Bill has chaired the boards of the Ocean Conservancy and the Global Heritage Fund, and been President of the Natural Science Collections Alliance. He has degrees from the University of Virginia (BA Biology), Johns Hopkins University (MAT), University of Hawaii (PhD Zoology), where he lived on an uninhabited island to study seabirds, and Harvard Law School (JD). He has authored many non-fiction publications and two novels: <em>Valley of the Scorpion</em> and <em>Ruffner's Cave</em>. He is married to Mary McLeod and they have two daughters, Julia and Emma.</p>
+
+            <a href="bio.html" class="bio-link">Read full biography &rarr;</a>
         </div>
+
+        <section>
+            <h2>Publications</h2>
+            <div class="cards">
+                <a href="publications.html" class="card">
+                    <h3>Selected Publications</h3>
+                    <p>Fiction, policy papers, congressional testimony, federal register publications, and biological research spanning five decades.</p>
+                    <div class="arrow">View publications &rarr;</div>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tools</h2>
+            <div class="cards">
+                <a href="power-calculator.html" class="card">
+                    <h3>Power Capacity Calculator</h3>
+                    <p>Estimate how many homes can be powered by a given generation capacity. Adjustable capacity factor and average home power demand for use with any power source or country.</p>
+                    <div class="arrow">Open calculator &rarr;</div>
+                </a>
+                <a href="co2-temperature-calculator.html" class="card">
+                    <h3>CO2 Temperature Calculator</h3>
+                    <p>Estimate average temperature increase from atmospheric CO2 increase. Based on IPCC AR6 and Earth System Science Data.</p>
+                    <div class="arrow">Open calculator &rarr;</div>
+                </a>
+            </div>
+        </section>
     </div>
 </body>
 </html>
