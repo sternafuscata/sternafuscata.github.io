@@ -27,42 +27,44 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f8fafc;
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #ffffff;
+            color: #1a1a1a;
             min-height: 100vh;
-            padding: 40px 20px;
-            line-height: 1.6;
+            padding: 60px 20px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 680px;
             margin: 0 auto;
         }
 
         h1 {
-            color: #1a365d;
-            font-size: 2.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 2.2rem;
             margin-bottom: 8px;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
-            color: #64748b;
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+            color: #666666;
+            font-size: 1.1rem;
+            margin-bottom: 48px;
+            font-style: italic;
         }
 
         .bio {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
+            margin-bottom: 48px;
         }
 
         .bio p {
-            color: #334155;
-            font-size: 1.05rem;
-            margin-bottom: 16px;
+            color: #333333;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
         }
 
         .bio p:last-child {
@@ -71,22 +73,24 @@
 
         .bio-link {
             display: inline-block;
-            margin-top: 16px;
-            color: #3b82f6;
-            text-decoration: none;
-            font-weight: 500;
+            margin-top: 20px;
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
         }
 
         .bio-link:hover {
-            text-decoration: underline;
+            color: #666666;
         }
 
         h2 {
-            color: #334155;
-            font-size: 1.25rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1a1a;
+            font-size: 1rem;
+            font-weight: 600;
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.1em;
         }
 
         .cards {
@@ -95,36 +99,38 @@
         }
 
         .card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 24px 0;
+            border-top: 1px solid #e5e5e5;
             text-decoration: none;
             color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
             display: block;
+            transition: opacity 0.2s;
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            opacity: 0.7;
         }
 
         .card h3 {
-            color: #1a365d;
-            font-size: 1.25rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1a1a;
+            font-size: 1.15rem;
+            font-weight: 600;
             margin-bottom: 8px;
         }
 
         .card p {
-            color: #64748b;
-            line-height: 1.5;
+            color: #666666;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .arrow {
-            color: #3b82f6;
+            color: #1a1a1a;
             margin-top: 12px;
-            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: underline;
+            text-underline-offset: 3px;
         }
 
         section {
