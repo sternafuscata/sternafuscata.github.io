@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osa Peninsula Bird Checklist</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a4d1a 0%, #2d7a2d 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #1a4d1a;
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .species-count {
+            color: #2d7a2d;
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .photo-item {
+            text-align: center;
+        }
+
+        .photo-item img {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .photo-caption {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .family-section {
+            margin-bottom: 24px;
+        }
+
+        .family-name {
+            color: #1a4d1a;
+            font-size: 1rem;
+            font-weight: 600;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 12px;
+        }
+
+        .family-latin {
+            font-weight: 400;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .species-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 8px;
+        }
+
+        .species-list li {
+            color: #334155;
+            padding: 6px 12px;
+            background: #f8fafc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .species-list li:hover {
+            background: #e8f5e9;
+        }
+
+        .credit {
+            margin-top: 32px;
+            padding-top: 16px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Osa Peninsula Bird Checklist</h1>
+        <p class="subtitle">Bosque del Cabo, Costa Rica</p>
+        <p class="species-count">43 species observed, March 2026</p>
+
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="images/coati.png" alt="Coati">
+                <p class="photo-caption">White-nosed Coati</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/scarlet-macaw.png" alt="Scarlet Macaw">
+                <p class="photo-caption">Scarlet Macaw</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/yellow-headed-caracara.png" alt="Yellow-headed Caracara">
+                <p class="photo-caption">Yellow-headed Caracara</p>
+            </div>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Tinamous <span class="family-latin">Tinamidae</span></h2>
+            <ul class="species-list">
+                <li>Great Tinamou</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Guans and Curassows <span class="family-latin">Cracidae</span></h2>
+            <ul class="species-list">
+                <li>Crested Guan</li>
+                <li>Great Curassow</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Pigeons and Doves <span class="family-latin">Columbidae</span></h2>
+            <ul class="species-list">
+                <li>Short-billed Pigeon</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Hummingbirds <span class="family-latin">Trochilidae</span></h2>
+            <ul class="species-list">
+                <li>Charming Hummingbird</li>
+                <li>Long-billed Hermit</li>
+                <li>White-necked Jacobin</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Frigatebirds <span class="family-latin">Fregatidae</span></h2>
+            <ul class="species-list">
+                <li>Magnificent Frigatebird</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Pelicans <span class="family-latin">Pelecanidae</span></h2>
+            <ul class="species-list">
+                <li>Brown Pelican</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Herons <span class="family-latin">Ardeidae</span></h2>
+            <ul class="species-list">
+                <li>Bare-throated Tiger Heron</li>
+                <li>Western Cattle-Egret</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">New World Vultures <span class="family-latin">Cathartidae</span></h2>
+            <ul class="species-list">
+                <li>Black Vulture</li>
+                <li>Turkey Vulture</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Hawks and Eagles <span class="family-latin">Accipitridae</span></h2>
+            <ul class="species-list">
+                <li>Roadside Hawk</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Owls <span class="family-latin">Strigidae</span></h2>
+            <ul class="species-list">
+                <li>Mottled Owl</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Trogons <span class="family-latin">Trogonidae</span></h2>
+            <ul class="species-list">
+                <li>Black-throated Trogon</li>
+                <li>Slaty-tailed Trogon</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Toucans <span class="family-latin">Ramphastidae</span></h2>
+            <ul class="species-list">
+                <li>Fiery-billed Aracari</li>
+                <li>Yellow-throated Toucan</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Woodpeckers <span class="family-latin">Picidae</span></h2>
+            <ul class="species-list">
+                <li>Golden-naped Woodpecker</li>
+                <li>Pale-billed Woodpecker</li>
+                <li>Red-crowned Woodpecker</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Falcons and Caracaras <span class="family-latin">Falconidae</span></h2>
+            <ul class="species-list">
+                <li>Yellow-headed Caracara</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Parrots <span class="family-latin">Psittacidae</span></h2>
+            <ul class="species-list">
+                <li>Red-lored Amazon</li>
+                <li>Scarlet Macaw</li>
+                <li>White-crowned Parrot</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Antbirds <span class="family-latin">Thamnophilidae</span></h2>
+            <ul class="species-list">
+                <li>Chestnut-backed Antbird</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Tityras and Allies <span class="family-latin">Tityridae</span></h2>
+            <ul class="species-list">
+                <li>Black-crowned Tityra</li>
+                <li>Masked Tityra</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Tyrant Flycatchers <span class="family-latin">Tyrannidae</span></h2>
+            <ul class="species-list">
+                <li>Bright-rumped Attila</li>
+                <li>Great Crested Flycatcher</li>
+                <li>Great Kiskadee</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Vireos <span class="family-latin">Vireonidae</span></h2>
+            <ul class="species-list">
+                <li>Lesser Greenlet</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Wrens <span class="family-latin">Troglodytidae</span></h2>
+            <ul class="species-list">
+                <li>Southern House Wren</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Blackbirds and Orioles <span class="family-latin">Icteridae</span></h2>
+            <ul class="species-list">
+                <li>Great-tailed Grackle</li>
+                <li>Scarlet-rumped Cacique</li>
+            </ul>
+        </div>
+
+        <div class="family-section">
+            <h2 class="family-name">Tanagers and Allies <span class="family-latin">Thraupidae</span></h2>
+            <ul class="species-list">
+                <li>Bananaquit</li>
+                <li>Golden-hooded Tanager</li>
+                <li>Green Honeycreeper</li>
+                <li>Palm Tanager</li>
+                <li>Scarlet-rumped Tanager</li>
+                <li>Summer Tanager</li>
+                <li>White-shouldered Tanager</li>
+            </ul>
+        </div>
+
+        <p class="credit">All photos: W.Y. Brown</p>
+    </div>
+</body>
+</html>
