@@ -49,30 +49,26 @@
             font-weight: 600;
         }
 
-        .photo-gallery {
+        .header-image {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .header-image img {
+            max-width: 180px;
+            max-height: 180px;
+        }
+
+        .bird-images {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 60px;
             margin-bottom: 32px;
-            flex-wrap: wrap;
         }
 
-        .photo-item {
-            text-align: center;
-        }
-
-        .photo-item img {
-            max-width: 200px;
-            max-height: 200px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .photo-caption {
-            color: #64748b;
-            font-size: 0.85rem;
-            margin-top: 8px;
-            font-style: italic;
+        .bird-images img {
+            max-width: 160px;
+            max-height: 180px;
         }
 
         .family-section {
@@ -125,23 +121,17 @@
 </head>
 <body>
     <div class="container">
+        <div class="header-image">
+            <img src="images/coati.png" alt="Coati">
+        </div>
+
         <h1>Osa Peninsula Bird Checklist</h1>
         <p class="subtitle">Bosque del Cabo, Costa Rica</p>
         <p class="species-count">43 species observed, March 2026</p>
 
-        <div class="photo-gallery">
-            <div class="photo-item">
-                <img src="images/coati.png" alt="Coati">
-                <p class="photo-caption">White-nosed Coati</p>
-            </div>
-            <div class="photo-item">
-                <img src="images/scarlet-macaw.png" alt="Scarlet Macaw">
-                <p class="photo-caption">Scarlet Macaw</p>
-            </div>
-            <div class="photo-item">
-                <img src="images/yellow-headed-caracara.png" alt="Yellow-headed Caracara">
-                <p class="photo-caption">Yellow-headed Caracara</p>
-            </div>
+        <div class="bird-images">
+            <img src="images/scarlet-macaw.png" alt="Scarlet Macaw">
+            <img src="images/yellow-headed-caracara.png" alt="Yellow-headed Caracara">
         </div>
 
         <div class="family-section">
